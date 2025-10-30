@@ -1,0 +1,447 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header container centralizado */
+  .header-inner-content {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+  }
+  
+  /* Navbar */
+  .navbar{
+    background-color: #141549;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    z-index: 99;
+  }
+  
+  .navbar > .header-inner-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo{
+    color: #0084ff;
+    font-weight: 700;
+  }
+  .logo span { color: #fff; }
+  
+  nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  nav ul li{
+    color: #fff;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  nav ul li:hover{
+    transform: translateY(-3px);
+    transition: all 0.2s;
+    font-weight: bold;
+  }
+  
+  .nav-icon-container{
+    display:flex;
+    align-items:center;
+  }
+  .nav-icon-container img{
+    width: 30px;
+    cursor: pointer;
+  }
+  .nav-icon-container img:first-child{
+    margin-right: 1rem;
+  }
+  
+  /* Header principal */
+  header{
+    background: radial-gradient(#fff, #b3b3bd);
+    padding: 2rem 0;
+  }
+  
+  .header-bottom-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  /* Lado esquerdo (texto) */
+  .header-bottom-side-left{
+    flex: 1 1 40%;
+    max-width: 500px;
+  }
+  .header-bottom-side-left h2{
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+  }
+  .header-bottom-side-left p{
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .header-bottom-side-left button{
+    background-color: #0084ff;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem 2.2rem;
+    border-radius: 9999px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.15s ease;
+  }
+  .header-bottom-side-left button:hover{
+    filter: brightness(0.95);
+  }
+  
+  /* Lado direito (imagem) */
+  .header-bottom-side-right{
+    flex: 1 1 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-bottom-side-right img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  
+ /* Responsividade geral - 
+    é uma abordagem de design que permite que um site 
+    ou aplicação web se adapte automaticamente a 
+    diferentes tamanhos de tela e dispositivos */
+  @media (max-width: 900px){
+    .logo{
+        font-size: 1.2rem;
+    }
+
+    .menu-button{
+        display: block;
+    }
+    
+    .header-bottom-side{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    nav{
+        position: absolute;
+        background-color: #2c2c2c;
+        width: 100%;
+        top: 41px;
+        display: none;
+    }
+
+    .show-menu nav{
+        display: block;
+    }
+
+    nav ul{
+        flex-direction: column;
+        background-color: #141549;
+    }
+
+    nav ul li{
+        text-align: center;
+        padding: 0.8rem;
+    }
+  }
+    /* Header */
+
+    /* Main Content */
+main{
+    background-color: #ebebeb;
+}
+
+    .gray-background{
+        background-color: #141549;
+    }
+  
+    /* 1rem equivale a 16px */
+    .page-inner-content{
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .cols{
+        display: grid;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 4rem 1rem;
+    }
+
+    .cols-3{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+    .cols-3 img{
+        max-width: 100%;
+        border-radius: 50px;
+        border: 3px solid #c4e7ff;
+    }
+
+    .cols-4 img{
+        max-width: 100%;
+        border-radius: 50px;
+        border: 3px solid #c4e7ff;
+    }
+
+    .cols-4{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .cols>*{
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .cols>*:hover{
+        transform: translateY(-5px);
+    }
+
+    .section-title{
+        text-align: center;
+        margin-top: 4rem;
+        font-size: 1.8rem;
+    }
+
+    .subtitle-underline{
+        width: 100px;
+        height: 5px;
+        background: #0084ff;
+        border-radius: 9999px;
+        margin: 8px auto 0 auto;
+    }
+  
+    .product{
+        color: #2c2c2c;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;    
+    }
+
+    .product-name{
+        font-weight: 600;
+        margin-top: 0.4rem;
+    }
+
+    .rate{
+        color: #0084ff;
+        font-size: 1.3rem;
+    }
+
+    .product-price span{
+        font-weight: 600;
+    }
+
+    .exclusive-container{
+        color: #fff;
+        flex-direction: row-reverse;
+        padding: 5rem 1rem;
+    }
+
+    .exclusive-container img{
+        max-width: 500px;
+    }
+
+    /* Media queries */
+
+    @media (max-width: 800px){
+        .section-title{
+            font-size: 1rem;
+        }
+
+        .cols-3{
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .cols-4{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .product-name, .product-price, .rate{
+            max-height: 1rem;
+            overflow: hidden;
+            font-size: 0.8rem;
+        }
+
+        .exclusive-container{
+            flex-direction: column-reverse;
+        }
+
+        .exclusive-container img{
+            margin-bottom: 4rem;
+        }
+    }
+
+    /* Main Content */
+
+    /* Testimonials */
+    .testimonials {
+        display: flex;
+        padding: 4rem 1rem;
+        justify-content: space-evenly;
+    }    
+
+    .testimonial{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 30%;
+        text-align: center;
+        box-shadow: 0 0 15px #afafaf;
+        padding: 1rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .testimonial:hover {
+        transform: translateY(-5px);
+    }
+
+    .testimonial p {
+        margin: 5px 0;
+    }
+
+    .testimonial p:first-child{
+        font-weight: bold;
+        font-size: 5rem;
+        color: #0084ff;
+        margin-top: 3rem;
+        line-height: 2rem;
+    }
+
+    .testimonial p:last-child{
+        font-weight: bold;
+    }
+
+    /* Media queries */
+    @media (max-width: 800px){
+        .testimonials{
+            flex-direction: 1.2rem;
+        }
+    }
+
+    /* Testimonials */
+
+    /* Footer */
+    .footer-content{
+        display: flex;
+        align-items: center;
+        color: #8f8f8f;
+        padding: 4rem 1rem;
+        gap: 14rem;
+    }
+
+    .download-options>*{
+        margin: 1rem 0;
+    }
+
+    .download-options>p:first-child{
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .download-options>div{
+        display:flex;
+    }
+
+    .download-options>div img{
+        width: 100px;
+    }
+
+    .logo-footer{
+        color: #fff;
+        margin-bottom: 0.8rem;
+    }
+
+    .links-footer ul{
+        list-style: none;
+    }
+
+    .links-footer ul li{
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+    }
+
+    .copyright{
+        color: #fff;
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    /* Media queries */
+    @media (max-widht: 800px){
+        .footer-content{
+            display: inline;
+            font-size: 0.8rem;
+        }
+
+        .footer-content>div{
+            padding: 1rem;
+        }
+
+        .download-options>div{
+            display: inline;
+        }
+
+        .download-options>div img{
+            width: 120px;
+        }
+
+        .copyright{
+            font-size: 0.8rem;
+        }
+    }
+
+    /* Footer */
+
+    /* Remove o sublinhado e define a cor padrão do link */
+a {
+  text-decoration: none; /* remove o sublinhado */
+  color: inherit; /* herda a cor do elemento pai */
+}
+
+/* Se quiser deixar a cor fixa (exemplo: preto) */
+a {
+  text-decoration: none;
+  color: #fff; /* cor preta */
+}
+
+/* Se “Rastreio” estiver em um cabeçalho, podemos reforçar o estilo */
+h1 a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+    /**instalar pacote Prettier - Code formatter no Visual Code/

@@ -1,0 +1,109 @@
+/* RESET / BASE */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  color: #000;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background: linear-gradient(180deg,#eceff1 0%, #646989 100%);
+  font-family: Arial, sans-serif;
+}
+
+/* CARD */
+.card {
+  z-index: 0;
+  background-color: #eceff1;
+  padding-bottom: 20px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* TOPO (header interno) */
+.top {
+  padding-top: 28px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+/* PROGRESSBAR */
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: #455a64;
+  padding-left: 0;
+  margin-top: 30px;
+  display: flex;
+  padding: 0 8%;
+  list-style: none;
+}
+
+/* cada passo ocupa 25% */
+#progressbar li {
+  position: relative;
+  width: 25%;
+  text-align: center;
+}
+
+/* circulo */
+#progressbar li::before {
+  content: "\f10c"; /* default icon (FontAwesome) */
+  font-family: FontAwesome;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  font-size: 18px;
+  background: #c5cae9;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  color: #fff;
+  text-align: center;
+}
+
+/* linha de conexão entre passos */
+#progressbar li::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 8px;
+  width: 100%;
+  transform: translateY(-50%);
+  background-color: #c5cae9;
+  z-index: -1;
+}
+
+/* ajustar a largura da linha para cada item (proteger bordas) */
+#progressbar li:last-child::after { display: none; } /* último não precisa de linha à direita */
+
+/* passos ativos */
+#progressbar li.active::before { background-color: #0084ff; }
+#progressbar li.active::after  { background-color: #0084ff; }
+
+/* trocar o ícone do before para 'check' quando active (opcional) */
+#progressbar li.active::before { content: "\f00c"; /* check */ }
+
+/* ICONS ROW */
+.icon {
+  width: 56px;
+  height: 56px;
+  margin-right: 12px;
+}
+
+.icon-content {
+  padding: 18px 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* responsividade */
+.icon-row { padding-left: 8%; padding-right: 8%; }
+
+@media screen and (max-width: 768px) {
+  .top { padding-left: 4%; padding-right: 4%; }
+  #progressbar { padding: 0 4%; }
+  .icon { width: 48px; height: 48px; }
+  .icon-content { padding: 12px 6px; }
+}
+
