@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Pedidos</title>
+  <link rel="stylesheet" href="/My-Repository/TECNOW/styles/dash.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Dashboard</h2>
+    <a href="/My-Repository/TECNOW/dash.html">Pedidos</a>
+    <a href="/My-Repository/TECNOW/dashprod.html">Produtos</a>
+    <a href="/My-Repository/TECNOW/dashcli.html">Clientes</a>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="card">
+      <h1>Dashboard de Pedidos</h1>
+      
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar por pedido">
+        <button>Buscar</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Número</th>
+            <th>Cliente</th>
+            <th>Status</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>123456</td>
+            <td>Maria Silva</td>
+            <td><span class="status separacao">Em separação</span></td>
+            <td><button class="btn-detalhes">Detalhes</button></td>
+          </tr>
+          <tr>
+            <td>123457</td>
+            <td>João Souza</td>
+            <td><span class="status entrega">Em rota de entrega</span></td>
+            <td><button class="btn-detalhes">Detalhes</button></td>
+          </tr>
+          <tr>
+            <td>123458</td>
+            <td>Ana Santos</td>
+            <td><span class="status entregue">Entregue</span></td>
+            <td><button class="btn-detalhes">Detalhes</button></td>
+          </tr>
+          <tr>
+            <td>123459</td>
+            <td>Carlos Pereira</td>
+            <td><span class="status separacao">Em separação</span></td>
+            <td><button class="btn-detalhes">Detalhes</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>

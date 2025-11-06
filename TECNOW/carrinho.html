@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrinho</title>
+  <link rel="stylesheet" href="/My-Repository/TECNOW/styles/carrinho.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar show-menu">
+    <div class="header-inner-content">
+      <h1 class="logo">TEC<span>NOW</span></h1>
+      <nav>
+        <ul>
+          <a href="/My-Repository/TECNOW/ecommerce.html">
+          <li>Home</li>
+          </a>
+          <li>Produtos</li>
+          <li>Sobre</li>
+          <li>Contato</li>
+          <a href="tracker.html">
+          <li>Rastreio</li>
+          </a>
+        </ul>
+      </nav>
+      <div class="nav-icon-container">
+        <img src="images/menu.png" alt="Menu" class="menu-button" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <main class="sacola container">
+    <h1>Minha Sacola</h1>
+
+    <section class="sacola-lista">
+      <!-- Produto exemplo -->
+      <article class="produto-sacola">
+        <img src="images/tv.jpg" alt="televisão" />
+        <div class="produto-info">
+          <h3>Televisão</h3>
+          <p>Televisão de 50 polegadas.</p>
+          <span class="produto-preco">R$ 1500</span>
+        </div>
+        <div class="produto-quantidade">
+          <input type="number" min="1" value="1" />
+        </div>
+        <button class="botao-remover">Remover</button>
+      </article>
+    </section>
+    <section class="sacola-lista">
+      <!-- Produto exemplo -->
+      <article class="produto-sacola">
+        <img src="images/tv.jpg" alt="televisão" />
+        <div class="produto-info">
+          <h3>Televisão</h3>
+          <p>Televisão de 50 polegadas.</p>
+          <span class="produto-preco">R$ 1500</span>
+        </div>
+        <div class="produto-quantidade">
+          <input type="number" min="1" value="1" />
+        </div>
+        <button class="botao-remover">Remover</button>
+      </article>
+    </section>
+    <section class="sacola-lista">
+      <!-- Produto exemplo -->
+      <article class="produto-sacola">
+        <img src="images/tv.jpg" alt="televisão" />
+        <div class="produto-info">
+          <h3>Televisão</h3>
+          <p>Televisão de 50 polegadas.</p>
+          <span class="produto-preco">R$ 1500</span>
+        </div>
+        <div class="produto-quantidade">
+          <input type="number" min="1" value="1" />
+        </div>
+        <button class="botao-remover">Remover</button>
+      </article>
+    </section>
+
+    <!-- Total e Finalizar -->
+    <div class="resumo-compra">
+      <div class="total-container">
+        <div class="total-info">
+          <span>Total:</span>
+          <span id="valor-total">R$ 0,00</span>
+        </div>
+        <button class="botao-finalizar">Finalizar Compra</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>TecNow</h4>
+        <p>melhor loja do Brasil.</p>
+      </div>
+      <div>
+        <h4>Ajuda</h4>
+        <ul>
+          <li><a href="#">Trocas e devoluções</a></li>
+          <li><a href="#">Envio & prazos</a></li>
+          <li><a href="#">Atendimento</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato:</h4>
+        <ul>
+          <li>
+            WhatsApp:
+            <a href="https://wa.me/5511955943948">(11) 95594-3946</a> ou 
+            <a href="https://wa.me/5511970236373">(11) 97023-6373</a>
+          </li>
+          <li>
+            Email:
+            <a href="mailto:tecnow@gmail.com">tecnow@gmail.com</a> ou 
+            <a href="mailto:suportetecnow@gmail.com">suportetecnow@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2025 TecNow. Todos os direitos reservados.</div>
+  </footer>
+
+  <script src="/My-Repository/TECNOW/scripts/carrinho.js"></script>
+</body>
+</html>

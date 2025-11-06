@@ -1,0 +1,241 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #1f2937;
+  background: #ffffff;
+  line-height: 1.5;
+}
+
+/* Container geral */
+.container {
+  width: min(1200px, 92%);
+  margin-inline: auto;
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #141549;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  z-index: 99;
+}
+
+.navbar > .header-inner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #0084ff;
+  font-weight: 700;
+  margin-left: 2rem; /* 🔹 move a logo um pouco pra direita */
+}
+.logo span { color: #fff; }
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+nav ul li {
+  color: #fff;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+nav ul li:hover {
+  transform: translateY(-3px);
+  transition: all 0.2s;
+  font-weight: bold;
+}
+
+.nav-icon-container {
+  display: flex;
+  align-items: center;
+}
+.nav-icon-container img {
+  width: 30px;
+  cursor: pointer;
+}
+.nav-icon-container img:first-child {
+  margin-right: 1rem;
+}
+
+/* Sacola */
+.sacola h1 {
+  font-size: 1.8rem;
+  margin: 1.5rem 0;
+  font-weight: 700;
+}
+
+.sacola-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.produto-sacola {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1rem;
+  width: 80%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.produto-sacola img {
+  width: 90px;
+  border-radius: 10px;
+}
+
+.produto-info {
+  flex: 1;
+}
+
+.produto-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.produto-info p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.produto-preco {
+  font-weight: 700;
+  color: #5d5fe5;
+}
+
+.produto-quantidade input {
+  width: 60px;
+  padding: 0.3rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+/* Botões */
+.botao-remover {
+  background: #141549;
+  color: #fff;
+  border: 0;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.botao-remover:hover {
+  background: #0084ff;
+}
+
+.botao-finalizar {
+  background: #141549;
+  color: #fff;
+  font-weight: 700;
+  border: 0;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.botao-finalizar:hover {
+  background: #0084ff;
+  transform: translateY(-2px);
+}
+
+/* Total fixo no canto superior direito com sombra azul e abaixado */
+.resumo-compra {
+  position: fixed;
+  top: 160px;
+  right: 40px;
+  background: #f8fafc;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #141549;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 0 4px 15px rgba(0, 132, 255, 0.4);
+  z-index: 50;
+}
+
+#valor-total {
+  color: #0084ff;
+  font-size: 1.3rem;
+}
+
+/* Rodapé */
+.site-footer {
+  background: #f8fafc;
+  border-top: 4px solid #e5e7eb;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 1rem;
+}
+
+.footer-grid h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.footer-grid p, 
+.footer-grid a {
+  color: #6b7280;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.footer-grid a:hover {
+  color: #0084ff;
+}
+
+.copy {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+/* Animação ao remover produto */
+.fade-out {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
