@@ -8,7 +8,7 @@
 
 /* Corpo geral */
 body {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-color: #141549;
   color: #fff;
   min-height: 100vh;
   display: flex;
@@ -17,12 +17,12 @@ body {
 /* Sidebar */
 .sidebar {
   width: 220px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #393a8f;
   backdrop-filter: blur(8px);
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid rgba(255,255,255,0.1);
+  border-right: 1px solid #141549;
 }
 
 .sidebar h2 {
